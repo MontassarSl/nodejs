@@ -1,10 +1,9 @@
-name: Docker Image CI
+name: CI/CD test
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "production" ]
+  
 
 jobs:
 
@@ -13,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: title test 1
+      run: echo "Test step 1 completed"
+    - name: title test 2
+      run: echo "Test step 2 completed"  
