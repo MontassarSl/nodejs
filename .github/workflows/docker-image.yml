@@ -30,7 +30,16 @@ jobs:
       
 
   job-3:
-    needs: [job-2]
+    needs: [job-1]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: title test 3
+      run: echo "Test step 3 completed"    
+      
+
+  job-4:
+    needs: [job-3]
     runs-on: ubuntu-latest
 
     steps:
