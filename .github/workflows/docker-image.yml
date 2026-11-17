@@ -1,7 +1,7 @@
 name: CI/CD test
 
 on:
-  push:
+  pull_request:
     branches: [ "production" ]
   
 
@@ -16,3 +16,6 @@ jobs:
       run: echo "Test step 1 completed"
     - name: title test 2
       run: echo "Test step 2 completed"  
+      
+    - name: title test 3
+      run: echo "Test step 3 completed"  
